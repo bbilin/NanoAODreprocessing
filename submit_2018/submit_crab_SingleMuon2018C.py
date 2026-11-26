@@ -1,4 +1,4 @@
-from CRABClient.UserUtilities import config, getUsernameFromCRIC
+from CRABClient.UserUtilities import config
 
 config = config()
 
@@ -9,11 +9,11 @@ config.General.transferOutputs = True
 
 config.JobType.pluginName = "Analysis"
 config.JobType.psetName = "run_crab_data.py"
-config.JobType.maxMemoryMB = 4000
+config.JobType.maxMemoryMB = 3000
 #config.JobType.numCores = 8
 
-config.Data.inputDataset = "/SingleMuon/Run2018C-UL2018_MiniAODv2_GT36-v2/MINIAOD" 
-config.Data.outLFNDirBase = "/store/group/cmst3/group/taug2/reNanoAOD/"
+config.Data.inputDataset = "/SingleMuon/Run2018C-UL2018_MiniAODv2_GT36-v3/MINIAOD" 
+config.Data.outLFNDirBase = "/store/group/METUCMS/photonana/reNanoAOD/"
 config.Data.outputDatasetTag = "SingleMuon_Run2018C-RunIISummer20UL18_NanoAODv9"
 config.Data.inputDBS = "global"
 config.Data.splitting = "FileBased"
@@ -21,5 +21,5 @@ config.Data.unitsPerJob = 10
 config.Data.publication = False
 config.Data.ignoreLocality = True
 
-config.Site.storageSite = "T2_CH_CERN"
+config.Site.storageSite = "T2_TR_METU"
 config.Site.whitelist = ["T2_*","T3_*"]
