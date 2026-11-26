@@ -20,10 +20,12 @@ cp NanoAODreprocessing/losttracks_cff.py PhysicsTools/NanoAOD/python/.
 cp NanoAODreprocessing/vertices_cff.py PhysicsTools/NanoAOD/python/.
 cp NanoAODreprocessing/taus_cff.py PhysicsTools/NanoAOD/python/.
 cp NanoAODreprocessing/nano_cff.py PhysicsTools/NanoAOD/python/.
+cp NanoAODreprocessing/beamspot_cff.py PhysicsTools/NanoAOD/python/.
 cp NanoAODreprocessing/DiTauFilter.cc PhysicsTools/NanoAOD/plugins/.
 cp NanoAODreprocessing/IsMatchedToHSProducer.cc PhysicsTools/NanoAOD/plugins/.
 cp NanoAODreprocessing/VertexTableProducer.cc PhysicsTools/NanoAOD/plugins/.
 cp NanoAODreprocessing/ReweightingProducer.cc PhysicsTools/NanoAOD/plugins/.
+cp NanoAODreprocessing/BeamspotTableProducer.cc PhysicsTools/NanoAOD/plugins/.
 cp -r NanoAODreprocessing/submit_2018 .
 cp -r NanoAODreprocessing/submit_2017 .
 rm -rf NanoAODreprocessing
