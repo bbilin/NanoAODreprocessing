@@ -9,11 +9,11 @@ config.General.transferOutputs = True
 
 config.JobType.pluginName = "Analysis"
 config.JobType.psetName = "run_crab_mc.py"
-config.JobType.maxMemoryMB = 4000
+config.JobType.maxMemoryMB = 3000
 #config.JobType.numCores = 8
 
 config.Data.inputDataset = "/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17MiniAODv2-106X_mc2017_realistic_v9-v2/MINIAODSIM" 
-config.Data.outLFNDirBase = "/store/group/cmst3/group/taug2/reNanoAOD/"
+config.Data.outLFNDirBase = "/store/group/METUCMS/photonana/reNanoAOD/"
 #config.Data.outLFNDirBase = "/store/group/cmst3/user/ccaillol/reNanoAOD/"
 config.Data.outputDatasetTag = "RunIISummer20UL17_NanoAODv9"
 config.Data.inputDBS = "global"
@@ -22,5 +22,5 @@ config.Data.unitsPerJob = 5
 config.Data.publication = False
 config.Data.ignoreLocality = True
 
-config.Site.storageSite = "T2_CH_CERN"
+config.Site.storageSite = "T2_TR_METU"
 config.Site.whitelist = ["T2_*","T3_*"]
