@@ -86,11 +86,15 @@ process.lheWeightsTable = cms.EDProducer(
 
 process.nanoAOD_step = cms.Path(process.nanoAOD_selection * process.nanoSequenceMC)
 process.nanoAOD_step += process.lheWeightsTable
+# genWeightsTable also runs in its own unfiltered path, so that the Runs tree's
+# genEventCount, genEventSumw and LHE weight sums count every processed event,
+# not only those that pass ditauFilter. The output still keeps nanoAOD_step only.
+process.genWeights_step = cms.Path(process.genWeightsTable)
 process.endjob_step = cms.EndPath(process.endOfProcess)
 process.NANOAODSIMoutput_step = cms.EndPath(process.NANOAODSIMoutput)
 
 # Schedule definition
-process.schedule = cms.Schedule(process.nanoAOD_step,process.endjob_step,process.NANOAODSIMoutput_step)
+process.schedule = cms.Schedule(process.genWeights_step,process.nanoAOD_step,process.endjob_step,process.NANOAODSIMoutput_step)
 from PhysicsTools.PatAlgos.tools.helpers import associatePatAlgosToolsTask
 associatePatAlgosToolsTask(process)
 
