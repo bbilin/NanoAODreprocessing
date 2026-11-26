@@ -1,4 +1,4 @@
-from CRABClient.UserUtilities import config, getUsernameFromCRIC
+from CRABClient.UserUtilities import config
 
 config = config()
 
